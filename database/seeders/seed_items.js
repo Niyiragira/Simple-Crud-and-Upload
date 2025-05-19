@@ -26,7 +26,6 @@ async function seed() {
 
     console.log('Seeding completed: Added sample items');
   } catch (error) {
-    console.error('Seeding failed:', error);
     throw error;
   }
 }
@@ -36,7 +35,6 @@ async function unseed() {
     await pool.query('DELETE FROM items;');
     console.log('Unseeding completed: Removed all items');
   } catch (error) {
-    console.error('Unseeding failed:', error);
     throw error;
   }
 }

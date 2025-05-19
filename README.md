@@ -22,12 +22,12 @@
    ```
 Endpoints are:
 Create an item (POST):
-http://<BASE_URL>/items
+http://simple-crud-and-upload-production.up.railway.app/items
 Get all items (GET):
-http://<BASE_URL>/items
+http://simple-crud-and-upload-production.up.railway.app/items
 Get a single item (GET):
-http://<BASE_URL>/items/:id
+http://simple-crud-and-upload-production.up.railway.app/items/:id
 Update an item (PUT):
-http://<BASE_URL>/items/:id
+http://simple-crud-and-upload-production.up.railway.app/items/:id
 Delete an item (DELETE):
-http://<BASE_URL>/items/:id
+http://simple-crud-and-upload-production.up.railway.app/items/:id

@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Routes
-const itemRoutes = require('./routes/itemRoutes');
+const itemRoutes = require('./src/routes/itemRoutes');
 app.use('/items', itemRoutes);
 
 // Home route
@@ -22,9 +22,6 @@ app.get('/', (req, res) => {
 
 // Error handling middleware
 app.use((err, req, res, next) => {
-  console.error('Global error handler caught an error:');
-  console.error('Error message:', err.message);
-  console.error('Error stack:', err.stack);
   console.error('Request details:', {
     method: req.method,
     url: req.url,
@@ -43,7 +40,6 @@ process.on('unhandledRejection', (reason, promise) => {
 
 // Handle uncaught exceptions
 process.on('uncaughtException', (error) => {
-  console.error('Uncaught Exception:', error);
   console.error('Stack trace:', error.stack);
   process.exit(1);
 });

@@ -7,7 +7,8 @@
     "start": "node index.js",
     "migrate": "node database/migrations/migrate.js",
     "seed": "node database/seeders/seed.js",
-    "db:reset": "npm run migrate && npm run seed"
+    "db:reset": "npm run migrate && npm run seed",
+    "build": "npm run db:reset"
   },
   "dependencies": {
     "cloudinary": "^2.6.1",

@@ -10,7 +10,6 @@ async function migrate() {
     
     console.log('All migrations completed successfully');
   } catch (error) {
-    console.error('Migration failed:', error);
     process.exit(1);
   }
 }

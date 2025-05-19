@@ -14,7 +14,6 @@ async function up() {
     `);
     console.log('Migration up completed: Created items table');
   } catch (error) {
-    console.error('Migration up failed:', error);
     throw error;
   }
 }
@@ -24,7 +23,6 @@ async function down() {
     await pool.query('DROP TABLE IF EXISTS items;');
     console.log('Migration down completed: Dropped items table');
   } catch (error) {
-    console.error('Migration down failed:', error);
     throw error;
   }
 }
